@@ -1,0 +1,114 @@
+/* Type Rules */
+
+@import "../variables.css";
+
+%type-base {
+  font-family: Arial, Helvetica, sans-serif;
+  color: $color-neutral-10;
+  letter-spacing: normal;
+}
+
+/* TITLE */
+
+%type-title-XL {
+  @extend %type-base;
+  font-weight: bold;
+  font-size: $title-XL;
+  line-height: $title-line-height-XL;
+}
+
+%type-title-L {
+  @extend %type-base;
+  font-weight: bold;
+  font-size: $title-L;
+  line-height: $title-line-height-L;
+}
+
+%type-title-M {
+  @extend %type-base;
+  font-weight: bold;
+  font-size: $title-M;
+  line-height: $title-line-height-M;
+}
+
+%type-title-S {
+  @extend %type-base;
+  font-weight: bold;
+  font-size: $title-S;
+  line-height: $title-line-height-S;
+}
+
+/* SECTION */
+%type-section-L {
+  @extend %type-base;
+  font-weight: 400;
+  font-size: $section-L;
+  line-height: $section-line-height-L;
+}
+
+%type-section-S {
+  @extend %type-base;
+  font-weight: 400;
+  font-size: $section-S;
+  line-height: $section-line-height-S;
+}
+
+/* SUBTITLE */
+%type-subtitle-L {
+  @extend %type-base;
+  font-weight: 400;
+  font-size: $subtitle-L;
+  line-height: $subtitle-line-height-L;
+}
+
+%type-subtitle-S {
+  @extend %type-base;
+  font-weight: 400;
+  font-size: $subtitle-S;
+  line-height: $subtitle-line-height-S;
+}
+
+/* BODY */
+%type-body-L {
+  @extend %type-base;
+  font-weight: 400;
+  font-size: $body-L;
+  line-height: $body-line-height-L;
+}
+
+%type-body-M {
+  @extend %type-base;
+  font-weight: 400;
+  font-size: $body-M;
+  line-height: $body-line-height-M;
+}
+
+%type-body-S {
+  @extend %type-base;
+  font-weight: 400;
+  font-size: $body-S;
+  line-height: $body-line-height-S;
+}
+
+/* BUTTON */
+%type-button {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: $button-text-L;
+  font-weight: 400;
+  line-height: 1;
+}
+
+/* BADGE */
+%type-badge {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: $badge-text;
+  line-height: 1;
+}
+
+/* Activate Code */
+%type-activation-code {
+  @extend %type-base;
+  font-weight: 500;
+  font-size: 7.292vw; /* 146px */
+  line-height: normal;
+}

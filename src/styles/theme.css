@@ -1,0 +1,26 @@
+/*
+@import "./_networks/apl.css";
+@import "./_networks/tlc.css";
+*/
+
+/* TODO: map over network definition to return a base def */
+
+$color-neutral-0: #000000;
+$color-neutral-1: #181818;
+$color-neutral-2: #333333;
+$color-neutral-3: #595959;
+$color-neutral-4: #737373;
+$color-neutral-5: #8c8c8c;
+$color-neutral-6: #a6a6a6;
+$color-neutral-7: #a6a6a6;
+$color-neutral-8: #cccccc;
+$color-neutral-9: #e6e6e6;
+$color-neutral-10: #ffffff;
+
+$color-red: #ff0000;
+
+$color-brand-dark: #160307;
+$color-brand-light: #5c0c1d;
+
+$highlight-mini-background-color: rgba(0, 0, 0, 0.3);
+$transparent-background-color: rgba(0, 0, 0, 0);

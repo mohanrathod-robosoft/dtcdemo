@@ -1,0 +1,34 @@
+@import '../../_settings/_variables.css';
+
+.titleLogo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 5px 15px;
+}
+
+.tileImage {
+  background: #fff;
+  border-radius: 5px;
+  padding: 0em;
+  margin: 0em;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+  width: 100%;
+  height: 150px;
+}
+
+.tileLogo {
+    width: 60px;
+    height: 20px;
+    margin-left: auto;
+}
+
+.tileTitle {
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.tileSubtitle {
+    font-size: 15px;
+    padding-left: 15px;
+}

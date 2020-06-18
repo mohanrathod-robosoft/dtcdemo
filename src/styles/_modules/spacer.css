@@ -1,0 +1,26 @@
+@import "../variables.css";
+
+/*https://app.zeplin.io/project/5e5bdd126671ff73b0444052/screen/5e5bdd45207f5362f7fd61cb*/
+/* TODO: resolve spacer xxs-xxl for top/bottom left/right usage */
+
+@define-mixin spacer-bottom $space {
+  margin-bottom: $space-$(space);
+}
+
+@define-mixin spacer-top $space {
+  margin-top: $space-$(space);
+}
+
+@define-mixin spacer-horizontal $spacing {
+  margin-left: $space-$(spacing);
+  margin-right: $space-$(spacing);
+}
+
+@define-mixin spacer-vertical $spacing {
+  margin-top: $space-$(spacing);
+  margin-bottom: $space-$(spacing);
+}
+
+@define-mixin spacer-ratio-height $ratio, $width {
+  padding-top: calc($width / ($ratio));
+}

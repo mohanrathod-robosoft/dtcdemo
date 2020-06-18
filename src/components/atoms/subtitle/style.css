@@ -1,0 +1,7 @@
+@import '../../_settings/_variables.css';
+
+.subtitle {
+  font-size: 1.5em;
+  color: #717171;
+  list-style: 1;
+}

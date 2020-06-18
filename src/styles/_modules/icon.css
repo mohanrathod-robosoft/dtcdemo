@@ -1,0 +1,35 @@
+@import "../variables.css";
+
+/* ICON */
+%icon-base {
+}
+
+%icon-XL {
+  @extend %icon-base;
+  width: $icon-XL;
+  height: $icon-XL;
+}
+
+%icon-L {
+  @extend %icon-base;
+  width: $icon-L;
+  height: $icon-L;
+}
+
+%icon-M {
+  @extend %icon-base;
+  width: $icon-M;
+  height: $icon-M;
+}
+
+%icon-S {
+  @extend %icon-base;
+  width: $icon-S;
+  height: $icon-S;
+}
+
+%icon-XS {
+  @extend %icon-base;
+  width: $icon-XS;
+  height: $icon-XS;
+}

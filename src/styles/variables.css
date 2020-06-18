@@ -1,0 +1,194 @@
+@import "./theme.css";
+
+/*
+  THESE VARIABLES SHOULD BE REPLACED WITH MIXIN/FUNCTION IMPLEMENTATION
+  - current hardcoded values are determined by (1920 * .01 / 100)
+*/
+
+/** App ***************************************************************/
+
+$app-height: 56.25vw;
+$app-sidebar-width-closed: 8.333vw;
+$app-sidebar-width-opened: 19.792vw;
+
+/** SPACERS ******************************************************************/
+
+$space-XXS: 0.1vw; /* 2px */
+$space-XS: 0.2vw; /* 4px */
+$space-S: 0.4vw; /* 8px */
+$space-M: 0.8vw; /* 16px */
+$space-L: 1.25vw; /* 24px */
+$space-XL: 1.67vw; /* 32px */
+$space-XXL: 2.08vw; /* 40px */
+$space-XXXL: 2.5vw; /* 48px */
+$space-XXXXL: 2.92vw; /* 56px */
+$space-JUMBO: 3.3vw; /* 64px */
+$space-GIGANTIC: 4.16vw; /* 80px */
+$space-ULTRA: 6.46vw; /* 124px */
+
+/** TYPOGRAPHY ***************************************************************/
+
+/* TITLE */
+$title-XL: 3.75vw; /* 72px */
+$title-L: 2.9vw; /* 56px */
+$title-M: 2.5vw; /* 48px */
+$title-S: 1.46vw; /* 28px */
+$title-line-height-XL: 3.96vw; /* 76px */
+$title-line-height-L: 3.125vw; /* 60px */
+$title-line-height-M: 2.7vw; /* 52px */
+$title-line-height-S: 1.67vw; /* 32px */
+
+/* SECTION */
+$section-L: 1.875vw; /* 36px */
+$section-S: 1.67vw; /* 32px */
+$section-line-height-L: 2.08vw; /* 40px */
+$section-line-height-S: 1.875vw; /* 36px */
+
+/* SUBTITLE */
+$subtitle-L: 1.875vw; /* 36px */
+$subtitle-S: 1.04vw; /* 20px */
+$subtitle-line-height-L: 2.08vw; /* 40px */
+$subtitle-line-height-S: 1.25vw; /* 24px */
+
+/* BODY */
+$body-L: 1.46vw; /* 28px */
+$body-M: 1.25vw; /* 24px */
+$body-S: 1.04vw; /* 20px */
+$body-line-height-L: 1.67vw; /* 32px */
+$body-line-height-M: 1.875vw; /* 36px */
+$body-line-height-S: 1.25vw; /* 24px */
+
+/* Badge Text */
+$badge-text: 0.94vw; /* 18px */
+
+/* Button Text */
+$button-text-M: 1.46vw; /* 28px */
+$button-text-L: 1.67vw; /* 32px */
+
+/** ICONS *********************************************************************/
+$icon-XL: 4.167vw; /* 80px */
+$icon-L: 2.917vw; /* 56px */
+$icon-M: 2.292vw; /* 44px */
+$icon-S: 1.667vw; /* 32px */
+$icon-XS: 1.25vw; /* 24px */
+
+/** COMPONENTS ****************************************************************/
+
+/* BUTTONS */
+$btn-inactive-color: $color-neutral-10;
+$btn-inactive-bgcolor: rgba($color-neutral-7, 0.5);
+
+$btn-primary-active-color: $color-neutral-1;
+$btn-primary-active-bgcolor: $color-neutral-10;
+
+$btn-secondary-active-color: $color-neutral-10;
+$btn-secondary-active-bgcolor: $color-neutral-2;
+
+$btn-logout-modal-width: 25vw; /* 480px */
+
+$btn-disabled-opacity: 0.3;
+
+$btn-wide-height: 3.33vw;
+$btn-wide-width: 25vw;
+
+/* RAILS */
+$rail-poster-primary-height: 26.145833333333332vw;
+
+/* INPUT */
+$border-radius-search: 0.42vw; /* 8px */
+
+/* TILES */
+/* @value syntax is utilizing postcss-modules-values to allow postcss to share same var in js */
+@value cardWidth: 25.156; /* 483px */
+@value contentAreaWidth: 91.667; /* 1760px */
+
+@value cardHighlightLargeImageWidth: 33.333; /* 640px */
+@value cardHighlightLargeDescriptionWidth: 46.458; /* 892px */
+
+@value cardHighlightMiniImageWidth: 25.625; /* 492px */
+@value cardHighlightMiniDescriptionWidth: 55.833; /* 1072px */
+
+@value cardStandardWidth: 25.625; /* 492px */
+@value cardStandardHeight: 14.426; /* 277px */
+@value cardStandardBorderRadius: 0.4; /* 8px */
+
+@value cardPosterWidth: 14.375; /* 276px */
+@value cardPosterHeight: 21.563; /* 414px */
+@value cardPosterBorderRadius: 0.4; /* 8px */
+
+$card-image-height: 13.98vw;
+$card-poster-height: 21.563vw;
+$card--highlight-large-image-width: 33.333vw; /* 640px */
+$card--highlight-large-image-height: 18.75vw; /* 360px */
+$card--highlight-large-image-border-radius: 0.4vw; /* 8px */
+
+$card--highlight-mini-image-width: 25.625vw; /* 492px */
+$card--highlight-mini-image-height: 14.531vw; /* 279px*/
+$card--highlight-mini-image-border-radius: 0.4vw; /* 8px */
+
+$card-border-size: 0.2083vw;
+
+/* LIVE */
+@value separatorHeight: 0.052; /* 1px */
+
+/* SPINNER */
+$spinner-size: 5.2vw; /* 5px */
+$spinner-thickness: 0.26vw; /* 5px */
+
+/* SEARCH */
+$search--top: 10.417vw; /* 200px */
+$search-controls-padding: 2.8vh 5.4vw; /* 30px 104px */
+$semi-transparent-dark-background-color: rgba($color-neutral-0, 0.5);
+
+/* WELCOME */
+$line-color: rgba($color-neutral-10, 0.3);
+$logo-text-color: rgba($color-neutral-10, 0.8);
+
+/* ACCOUNT SUBNAV */
+$subnav--top: 10.417vw; /* 200px */
+
+/* ACCOUNT PAGES */
+@value account--top: 20.156; /* 387px */
+
+/* MYLIST SUBNAV */
+$mylistsubnav--top: 15.208vw; /* 292px */
+
+/* ARTICLE BASIC */
+$article-padding: 15.625vw; /* 300px */
+$article-footer-spacing: 5.234vw; /* 100.5px */
+
+/* OPACITY */
+$active-opacity: 1;
+$inactive-sidebar-opacity: 0.5;
+$inactive-opacity: 0.3;
+
+/* HERO */
+
+$hero-height: 51.563vw;
+
+/* HERO CAROUSEL*/
+
+$hero-carousel-margin-top: -3vw;
+$hero-meta-width: 41.667vw; /* 800px */
+$hero-pager-width: 4.635vw;
+$hero-pager-height: 0.208vw;
+
+/* LOGOS */
+@value networkLogoDefaultWidth: 2.917; /* 56px */
+@value networkLogoDefaultHeight: 1.46; /* 28px */
+
+@value networkLogoSuccessWidth: 18.021; /* 346px */
+
+@value networkLogoHeroshowWidth: 4; /* 76.8px*/
+
+@value networkLogoHeaderWidth: 8.333; /* 160px */
+@value mvpdLogoHeaderWidth: 5.208; /* 100px */
+@value mvpdLogoProviderPageWidth: 10.416; /* 200px */
+
+/* NETWORK SELECTOR */
+@value networkSelectorHeight: 9.6875; /* 186px */
+
+@value networkSelectorTabSize: 6.771; /* 130px */
+@value networkSelectorTabPadding: 0.677; /* 45px 13px */
+
+/* PLEASE NOTE THE PIXEL VALUE YOU ARE CONVERTING TO */
