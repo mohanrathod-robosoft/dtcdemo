@@ -13,12 +13,15 @@ export const ButtonType = {
 export const ButtonTheme = {
   DEFAULT: 'default',
   ROUNDED: 'rounded',
+  ACTIVE: 'active',
 }
 
-export const ButtonSize = {
-  SMALL: 'small',
-  MEDIUM: 'medium',
-  LARGE: 'large',
+export const TextSize = {
+  SIZE12: 'size12',
+  SIZE14: 'size14',
+  SIZE18: 'size18',
+  SIZE20: 'size20',
+  SIZE28: 'size28',
 }
 
 type Props = {
@@ -53,7 +56,7 @@ const Menu = (props: Props): React.Element<*> => {
 Menu.defaultProps = {
   type: ButtonType.BUTTON,
   theme: ButtonTheme.DEFAULT,
-  size: ButtonSize.MEDIUM,
+  size: TextSize.SIZE12,
   onClick: () => {},
   className: '',
   disabled: false,

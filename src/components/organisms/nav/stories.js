@@ -5,10 +5,10 @@ import { storiesOf } from '@storybook/react'
 
 import Block from '_components/molecules/block'
 
-import Feature from './'
+import Nav from './'
 
-storiesOf('Feature', module).add('default', () => (
-  <Feature image="https://i.pinimg.com/originals/7e/d6/1a/7ed61a337b0cccb1598fe5fd1b9724bf.jpg">
+storiesOf('Nav', module).add('default', () => (
+  <Nav image="https://i.pinimg.com/originals/7e/d6/1a/7ed61a337b0cccb1598fe5fd1b9724bf.jpg">
     <Block title="Atom" button="Learn more">
       <p>
         An atom is the smallest constituent unit of ordinary matter that has the properties of a
@@ -17,5 +17,5 @@ storiesOf('Feature', module).add('default', () => (
         meter, in the short scale).
       </p>
     </Block>
-  </Feature>
+  </Nav>
 ))

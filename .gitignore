@@ -63,3 +63,6 @@ typings/
 
 # Mac files
 .DS_Store
+
+#storybook-static
+storybook-static

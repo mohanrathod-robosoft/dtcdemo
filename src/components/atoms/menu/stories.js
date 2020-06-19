@@ -4,32 +4,17 @@ import React from 'react'
 import { storiesOf } from '@storybook/react'
 import { action } from '@storybook/addon-actions'
 
-import Menu, { MenuTheme, MenuSize } from './'
+import Menu, { MenuTheme, TextSize } from './'
 
 storiesOf('Menu', module)
-  .add('default', () => <Button onClick={action('clicked')}>Learn more</Button>)
-  .add('default - small', () => (
-    <Button size={ButtonSize.SMALL} onClick={action('clicked')}>
+  .add('default', () => <Menu onClick={action('clicked')}>Learn more</Menu>)
+  .add('default - size12', () => (
+    <Menu size={TextSize.SIZE12} onClick={action('clicked')}>
       Learn more
-    </Button>
+    </Menu>
   ))
-  .add('default - medium', () => (
-    <Button size={ButtonSize.MEDIUM} onClick={action('clicked')}>
+  .add('default - size18', () => (
+    <Menu size={TextSize.SIZE18} onClick={action('clicked')}>
       Learn more
-    </Button>
-  ))
-  .add('default - large', () => (
-    <Button size={ButtonSize.LARGE} onClick={action('clicked')}>
-      Learn more
-    </Button>
-  ))
-  .add('rounded', () => (
-    <Button theme={ButtonTheme.ROUNDED} onClick={action('clicked')}>
-      Learn more
-    </Button>
-  ))
-  .add('disabled', () => (
-    <Button theme={ButtonTheme.ROUNDED} disabled onClick={action('clicked')}>
-      Learn more
-    </Button>
+    </Menu>
   ))

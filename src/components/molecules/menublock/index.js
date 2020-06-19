@@ -1,5 +1,6 @@
 /* @flow */
 import * as React from 'react'
+import styles from './style.css'
 
 import Cardtrans from '_components/atoms/cardtrans'
 import Menu from '_components/atoms/menu'
@@ -14,11 +15,17 @@ type Props = {
 }
 
 const Menublock = (props: Props): React.Element<*> => (
+  
   <Cardtrans className={props.className}>
-    <Image src={logo_game} alt="image" width="140" height="30" padding-top="8px"></Image>
-    {props.buttonHome !== '' && <Menu>{props.buttonHome}</Menu>}
-    {props.buttonShow !== '' && <Menu>{props.buttonShow}</Menu>}
+    <div className={styles.external}>
+      <Image src={logo_game} alt="image" width="140" height="30"></Image>
+      {props.buttonHome !== '' && <div className={styles.internal}><Image src={logo_game} alt="image" width="20" height="20" className={styles.logoimage}></Image><Menu size="size14">{props.buttonHome}</Menu></div>}
+      {props.buttonStuff !== '' && <div className={styles.internal}><Image src={logo_game} alt="image" width="20" height="20" className={styles.logoimage}></Image><Menu size="size14">{props.buttonStuff}</Menu></div>}
+      {props.buttonShow !== '' && <div className={styles.internal}><Image src={logo_game} alt="image" width="20" height="20" className={styles.logoimage}></Image><Menu size="size14">{props.buttonShow}</Menu></div>}
+      {props.buttonSearch !== '' && <div className={styles.internal}><Image src={logo_game} alt="image" width="20" height="20" className={styles.logoimage}></Image><Menu size="size14">{props.buttonSearch}</Menu></div>}
+    </div>
   </Cardtrans>
+  
 )
 
 Menublock.defaultProps = {

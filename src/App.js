@@ -13,9 +13,10 @@ import Image from '_components/atoms/image'
 import Title from '_components/atoms/title'
 import Tile from '_components/molecules/tile'
 import logo_game from '_components/assets/grocery-games.png';
-import tile_image from '_components/assets/standard-episode2.png';
-import tile_logo from '_components/assets/grocery-games.png';
 import bghome from '_components/assets/heroImage.jpeg';
+import Railwatching from '_components/organisms/railwatching'
+import Railstuff from '_components/organisms/railstuff'
+import Railnetwork from '_components/organisms/railnetwork'
 
 import './bootstrap'
 
@@ -24,18 +25,21 @@ const App = (): React.Element<*> => (
     
     <Feature
       className={view.hero}
-      gradient="linear-gradient(to bottom, rgba(41, 45, 56, 0) -33%, rgba(21, 23, 28, 0.4), #1e2328 60%)"
+      gradient="linear-gradient(to bottom, rgba(41, 45, 56, 0) -33%, rgba(21, 23, 28, 0.4), #1e2328 40%)"
       image={bghome}
     >
       <Nav 
       className={view.nav}
       >
-          <Menublock buttonHome="Home" buttonShow="Show"></Menublock>
+          <Menublock buttonHome="Home" buttonStuff="My Stuff" buttonShow="Show" buttonSearch="Search"></Menublock>
           <Navblock>
-            <Menu>For You</Menu>}
-            <Menu>Category</Menu>}
-            <Menu>Category</Menu>}
-            <Menu>Category</Menu>}
+            <Menu size="size20" theme="active">For You</Menu>
+            <Menu size="size20">Category</Menu>
+            <Menu size="size20">Category</Menu>
+            <Menu size="size20">Category</Menu>
+            <Menu size="size20">Category</Menu>
+            <Menu size="size20">Category</Menu>
+            <Menu size="size20">Category</Menu>
           </Navblock>
 
       </Nav>
@@ -49,17 +53,18 @@ const App = (): React.Element<*> => (
 
       
       <div className={view.col1}>
-        <Tile src={tile_image} logo={tile_logo} title="sfsfafsffasfa" subtitle="asdfsaf"></Tile>
-        <Tile src={tile_image} logo={tile_logo} title="sfsfafsffasfa" subtitle="asdfsaf"></Tile>
-        <Tile src={tile_image} logo={tile_logo} title="sfsfafsffasfa" subtitle="asdfsaf"></Tile>
-        <Tile src={tile_image} logo={tile_logo} title="sfsfafsffasfa" subtitle="asdfsaf"></Tile>
+        <Subtitle className={view.padding}>Continue Watching</Subtitle>
+        <Railwatching className="watchHeight"></Railwatching>
       </div>
       <div className={view.col2}>
+        <Subtitle className={view.padding}>My Stuff</Subtitle>
+        <Railstuff className="stuffHeight"></Railstuff>
       </div>
-      <div className={view.col1}>
+      <div className={view.col3}>
+        <Subtitle className={view.padding}>Networks</Subtitle>
+        <Railnetwork className="stuffHeight"></Railnetwork>
       </div>
-      <div className={view.col2}>
-      </div>
+      
 
     </Feature>
 

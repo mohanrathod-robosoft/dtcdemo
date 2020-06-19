@@ -1,0 +1,4 @@
+.railwatching {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(300px, 350px));
+}

@@ -21,10 +21,10 @@ type Props = {
 const Tile = (props: Props): React.Element<*> => (
   <div className={props.className}>
     <Cardtrans className={props.className}>
-      <Image src={props.src} alt="image here" className={styles.tileImage}></Image>
+      <Image src={props.src} alt="image here" className={classnames(props.className, styles.tileImage)} height={props.height} ></Image>
       <div className={styles.titleLogo}>
         <Title className={styles.tileTitle}>{props.title}</Title>
-        <Image src={props.logo} alt="image here" className={styles.tileLogo}></Image>
+        {props.logo && <Image src={props.logo} alt="image here" className={styles.tileLogo}></Image>}
       </div>
       <Subtitle className={styles.tileSubtitle}>{props.subtitle}</Subtitle>
       
