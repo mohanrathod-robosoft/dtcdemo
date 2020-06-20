@@ -11,7 +11,6 @@ import Navblock from '_components/molecules/navblock'
 import Menu from '_components/atoms/menu'
 import Image from '_components/atoms/image'
 import Title from '_components/atoms/title'
-import Tile from '_components/molecules/tile'
 import logo_game from '_components/assets/grocery-games.png';
 import bghome from '_components/assets/heroImage.jpeg';
 import Railwatching from '_components/organisms/railwatching'
@@ -53,15 +52,15 @@ const App = (): React.Element<*> => (
 
       
       <div className={view.col1}>
-        <Subtitle className={view.padding}>Continue Watching</Subtitle>
+        <Subtitle>Continue Watching</Subtitle>
         <Railwatching className="watchHeight"></Railwatching>
       </div>
       <div className={view.col2}>
-        <Subtitle className={view.padding}>My Stuff</Subtitle>
+        <Subtitle>My Stuff</Subtitle>
         <Railstuff className="stuffHeight"></Railstuff>
       </div>
       <div className={view.col3}>
-        <Subtitle className={view.padding}>Networks</Subtitle>
+        <Subtitle>Networks</Subtitle>
         <Railnetwork className="stuffHeight"></Railnetwork>
       </div>
       

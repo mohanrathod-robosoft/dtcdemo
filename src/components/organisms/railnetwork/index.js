@@ -19,12 +19,12 @@ const Railnetwork = (props: Props): React.Element<*> => (
     className={classnames(styles.railnetwork, props.className)}
   >
     
-    <Tile src={tile_image} height="150px"></Tile>
-    <Tile src={tile_image} height="150px"></Tile>
-    <Tile src={tile_image} height="150px"></Tile>
-    <Tile src={tile_image} height="150px"></Tile>
-    <Tile src={tile_image} height="150px"></Tile>
-    <Tile src={tile_image} height="150px"></Tile>
+    <Tile src={tile_image} height="240px"></Tile>
+    <Tile src={tile_image} height="240px"></Tile>
+    <Tile src={tile_image} height="240px"></Tile>
+    <Tile src={tile_image} height="240px"></Tile>
+    <Tile src={tile_image} height="240px"></Tile>
+    <Tile src={tile_image} height="240px"></Tile>
 
   </div>
 )

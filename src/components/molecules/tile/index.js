@@ -4,7 +4,6 @@ import classnames from 'classnames'
 
 import styles from './style.css'
 
-import Cardtrans from '_components/atoms/cardtrans'
 import Title from '_components/atoms/title'
 import Subtitle from '_components/atoms/subtitle'
 import Image from '_components/atoms/image'
@@ -20,15 +19,13 @@ type Props = {
 
 const Tile = (props: Props): React.Element<*> => (
   <div className={props.className}>
-    <Cardtrans className={props.className}>
-      <Image src={props.src} alt="image here" className={classnames(props.className, styles.tileImage)} height={props.height} ></Image>
+    <div><Image src={props.src} alt="image here" className={classnames(props.className, styles.tileImage)} height={props.height} ></Image></div>
       <div className={styles.titleLogo}>
         <Title className={styles.tileTitle}>{props.title}</Title>
         {props.logo && <Image src={props.logo} alt="image here" className={styles.tileLogo}></Image>}
       </div>
-      <Subtitle className={styles.tileSubtitle}>{props.subtitle}</Subtitle>
+      <div><Subtitle className={styles.tileSubtitle}>{props.subtitle}</Subtitle></div>
       
-    </Cardtrans>
   </div>
 )
 
