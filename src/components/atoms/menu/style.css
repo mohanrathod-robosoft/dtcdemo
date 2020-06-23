@@ -1,6 +1,6 @@
 @import '../../_settings/_variables.css';
 
-.button {
+.menuButton {
   -webkit-appearance: none;
   border: 0;
   outline: 0;
@@ -28,7 +28,7 @@
 }
 
 /* Theme */
-.default {
+.menuTheme {
   color: #fff;
   background: var(--transparent);
   border: 1px solid var(--transparent);

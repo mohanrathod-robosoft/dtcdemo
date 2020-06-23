@@ -1,0 +1,6 @@
+.footerlinks {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 150px));
+    padding-left: 20%;
+    padding-bottom: 60px;
+}

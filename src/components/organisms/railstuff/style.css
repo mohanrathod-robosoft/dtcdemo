@@ -1,6 +1,6 @@
 .railstuff {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 250px));
-  grid-template-rows: 25em;
+  grid-template-rows: 28em;
   grid-gap: 2em;
 }

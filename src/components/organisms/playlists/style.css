@@ -1,0 +1,5 @@
+.playlists {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 250px));
+  grid-gap: 2em;
+}

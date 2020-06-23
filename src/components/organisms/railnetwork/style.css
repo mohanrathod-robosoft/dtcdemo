@@ -1,5 +1,5 @@
 .railnetwork {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 250px));
+  grid-template-columns: repeat(auto-fit, minmax(210px, 212px));
   grid-gap: 2em;
 }

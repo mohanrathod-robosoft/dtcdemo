@@ -28,7 +28,7 @@
 }
 
 /* Theme */
-.default {
+.atomTheme {
   color: #000;
   background: var(--wait);
   border: 1px solid var(--wait);

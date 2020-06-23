@@ -7,7 +7,7 @@ const resolve = require('./webpack/resolve.js')
 
 module.exports = {
   devtool: 'cheap-module-eval-source-map',
-  entry: ['webpack-hot-middleware/client', './src/index'],
+  entry: path.join(__dirname, 'src', 'index.tsx'), 
   output: {
     path: path.join(__dirname, 'dist'),
     filename: 'bundle.js',
@@ -20,92 +20,28 @@ module.exports = {
         NODE_ENV: JSON.stringify('development'),
       },
     }),
-    new ExtractTextPlugin('styles.css'),
+    new ExtractTextPlugin('styles.scss'),
   ],
   resolve,
   module: {
     rules: [
+      { 
+        test: /\.(ts|tsx)$/, 
+        loader: "ts-loader",
+        exclude: /node_modules/,
+      }, 
       {
-        test: /\.js$/,
+        test: /\.(js|jsx)$/,      
         loader: 'babel-loader',
         exclude: /node_modules/,
       },
-      {
-        test: /\.css$/,
-        include: /node_modules/,
-        loader: ExtractTextPlugin.extract({
-          fallback: 'style-loader',
-          use: [
-            {
-              loader: 'css-loader',
-              options: {
-                modules: false,
-                localIdentName: '[name]__[local]___[hash:base64:5]',
-              },
-            },
-          ],
-        }),
-      },
-      {
-        test: /\.css$/,
-        exclude: /node_modules/,
-        loader: ExtractTextPlugin.extract({
-          fallback: 'style-loader',
-          use: [
-            {
-              loader: 'css-loader',
-              options: {
-                modules: true,
-                importLoaders: 2,
-                localIdentName: '[name]__[local]___[hash:base64:5]',
-              },
-            },
-            {
-              loader: 'postcss-loader',
-            },
-          ],
-        }),
-      },
-      {
-        test: /\.svg$/,
-        use: [
-          {
-            loader: 'svg-sprite-loader',
-            options: {
-              symbolId: '[name]_[hash]',
-              runtimeCompat: false,
-              prefixize: true,
-            },
-          },
-          {
-            loader: 'svgo-loader',
-            options: {
-              plugins: [
-                { removeTitle: true },
-                { convertColors: { shorthex: false } },
-                { convertPathData: false },
-              ],
-            },
-          },
-        ],
-      },
-      {
-        test: /\.(jpe?g|png)$/i,
-        loader: 'file-loader',
-        options: {
-          hash: 'sha512',
-          digest: 'hex',
-          name: '[hash].[ext]',
-        },
-      },
-      {
-        test: /\.ico$/i,
-        loader: 'file-loader',
-        options: {
-          hash: 'sha512',
-          digest: 'hex',
-          name: 'favicon.ico',
-        },
+      {        
+        test: /\.(css|scss)$/,        
+        use: ["style-loader", "css-loader", "sass-loader"]      
+      },      
+      {        
+        test: /\.(jpg|jpeg|png|gif|mp3|svg)$/,
+        loaders: ['file-loader']
       },
     ],
   },
